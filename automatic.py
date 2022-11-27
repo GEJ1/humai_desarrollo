@@ -1,4 +1,3 @@
-import click
 from humai_desarrollo_1 import my_etl as etl
 from random import randint
 
