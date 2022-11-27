@@ -1,5 +1,6 @@
 import click
-from humai_desarrollo_1 import my_etl as etl
+from humai_desarrollo import my_etl as etl
+
 
 @click.command()
 @click.option("--number", type=int, prompt="Elegi un numero", help="El numero elegido.")

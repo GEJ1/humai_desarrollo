@@ -1,7 +1,7 @@
-from humai_desarrollo_1 import my_etl as etl
+from humai_desarrollo import my_etl as etl
 from random import randint
 
-number = randint(0, 500)
+number = randint(0, 99)
 
 
 def main(number):
