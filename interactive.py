@@ -1,13 +1,14 @@
 import click
-from datetime import datetime
-
+from humai_desarrollo_1 import my_etl as etl
 
 @click.command()
 @click.option("--number", type=int, prompt="Elegi un numero", help="El numero elegido.")
 def main(number):
     """Elegis un numero y te devuelve un texto asociado"""
-    number_text = number_api(number)
-    print(number_text)
+    number, data = etl.number_api_extract(number)
+    print(data)
+    df = etl.load(number, data)
+    etl.transform(df)
 
 
 if __name__ == "__main__":
